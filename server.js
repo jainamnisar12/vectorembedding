@@ -1,6 +1,8 @@
 import { Pinecone } from "@pinecone-database/pinecone";
+import dotenv from 'dotenv';
+dotenv.config();
 
-const pc = new Pinecone({ apiKey: "e4443092-c3cb-4c81-89eb-20012bf7da02" });
+const pc = new Pinecone({ apiKey: process.env.PINECONE_API_KEY });
 
 const indexName = "pinconeembedding";
 
